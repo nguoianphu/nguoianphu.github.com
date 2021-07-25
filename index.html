@@ -7,7 +7,7 @@
         const users_info = await fetch('https://api.github.com/users/nguoianphu');
         const data_users_info = await users_info.json();
         let htmlString_users_info = '<div>';
-        htmlString_users_info += `<p><img src="${data_users_info.avatar_url}" /></p>`;
+        htmlString_users_info += `<p><img src="${data_users_info.avatar_url} width="150px"  /></p>`;
         htmlString_users_info += '</div>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString_users_info;
         
@@ -19,7 +19,7 @@
           htmlString += `<li><a href="${owner.html_url}">${owner.html_url}</a></li>`;
         }
         htmlString += '</ul>';
-        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+        document.getElementsByTagName('body')[1].innerHTML = htmlString;
       })()
     </script>
   <body>
