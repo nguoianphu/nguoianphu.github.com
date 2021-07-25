@@ -2,6 +2,16 @@
   <body>
     <script>
       (async () => {
+        
+        // Get total public repos
+        const response = await fetch('https://api.github.com/users/nguoianphu');
+        const data = await response.json();
+        let htmlString = '<div>';
+        htmlString += `<p><img src="${data.avatar_url}" /></p>`;
+        htmlString += '</div>';
+        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+        
+        // List out all repos
         const response = await fetch('https://api.github.com/users/nguoianphu/repos?per_page=100&page=1');
         const data = await response.json();
         let htmlString = '<ul>';
