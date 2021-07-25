@@ -8,7 +8,7 @@
         const data_users_info = await users_info.json();
         let htmlString_users_info = '<div>';
         htmlString_users_info += `<p><h1>Welcome to ${data_users_info.name}</h1></p>`;
-        htmlString_users_info += `<p><img src="${data_users_info.avatar_url} width="60px alt="${data_users_info.name}""/> ${data_users_info.bio}</p>`;
+        htmlString_users_info += `<p><img src="${data_users_info.avatar_url}" width="80px" alt="${data_users_info.name}""/> ${data_users_info.bio}</p>`;
         htmlString_users_info += '</div>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString_users_info;
         
