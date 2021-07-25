@@ -4,10 +4,10 @@
       (async () => {
         
         // Get total public repos
-        const response = await fetch('https://api.github.com/users/nguoianphu');
-        const data = await response.json();
+        const users_info = await fetch('https://api.github.com/users/nguoianphu');
+        const data_users_info = await users_info.json();
         let htmlString = '<div>';
-        htmlString += `<p><img src="${data.avatar_url}" /></p>`;
+        htmlString += `<p><img src="${data_users_info.avatar_url}" /></p>`;
         htmlString += '</div>';
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
         
