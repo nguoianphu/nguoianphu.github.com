@@ -19,7 +19,7 @@
           htmlString += `<li><a href="${owner.html_url}">${owner.html_url}</a></li>`;
         }
         htmlString += '</ul>';
-        document.getElementsByTagName('body')[1].innerHTML = htmlString;
+        document.getElementsByTagName('body')[0].innerHTML += htmlString;
       })()
     </script>
   <body>
